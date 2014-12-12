@@ -208,7 +208,7 @@ handRender w hand =
         drawCard cardtext =
             collage w' (w' * 2) [ group [ 
                 rect (w - 4) (w*1.25) |> filled lightGray,
-                rect (w - 4) (w*1.25) |> outlined (dashed lightBlue),
+                rect (w - 4) (w*1.25) |> outlined (solid blue),
                 toForm (Text.plainText cardtext) ] ]
     in flow right (map drawCard cards)
 
